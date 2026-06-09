@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" integrity="sha512-kJlvECunwXftkPwyvHbclArO8wszgBGisiLeuDFwNM8ws+wKIw0sv1os3ClWZOcrEB2eRXULYUsm8OVRGJKwGA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="./project.css">
+</head>
+<body>
+   <nav>
+      <aside id="nav_one">
+        <h1>Heavenly Bakes</h1>
+      </aside>
+      <aside id="nav_two">
+        <a href="about.html">About</a>
+        <a href="menu.html">Menu</a>
+        <a href="contact.html">Contact</a>
+      </aside>
+      <aside id="nav_three">
+        <i class="ri-shopping-cart-2-line" id="cart_icon"></i>
+        <div id="cart_quantity">0</div>
+        <p id="cart_price">₹0.00</p>
+      </aside>
+     </nav>
+    <aside id="sidebar">
+      <section id="sidebar_one">
+        <h1>Cart</h1>
+        <p id="close_sidebar">X</p>
+      </section>
+      <hr>
+      <section id="sidebar_items"></section>
+    </aside>
+    <section id="menu_filter">
+        <h1>Our Menu</h1>
+        <div id="filter_btns">
+            <button class="active" onclick="filterItems('all')">All</button>
+            <button onclick="filterItems('bread')">Breads</button>
+            <button onclick="filterItems('cake')">Cakes</button>
+            <button onclick="filterItems('croissant')">Croissants</button>
+            <button onclick="filterItems('fruitTart')">Fruit Tart</button>
+        </div>
+    </section>
+    <section id="menu_items">
+      <div class="card bread">
+        <article class="card_one">
+          <aside class="card_img">
+            <img src="./assert/brownbread1.jpg" alt="bread1" />
+          </aside>
+          <aside class="card_info">
+            <h2>WholeGrain Bread</h2>
+            <p>₹70.00/-</p>
+          </aside>
+        </article>
+        <article class="card_two">
+          <aside class="card_quantity">
+            <div class="minus">-</div>
+            <div class="quantity">0</div>
+            <div class="plus">+</div>
+          </aside>
+          <aside class="addToCart">
+            <button>Add To Cart</button>
+          </aside>
+        </article>
+      </div>
+      <div class="card bread">
+        <article class="card_one">
+          <aside class="card_img">
+            <img src="./assert/brown bread2.jpeg" alt="bread1" />
+          </aside>
+          <aside class="card_info">
+            <h2>Brown Bread</h2>
+            <p>₹50.00/-</p>
+          </aside>
+        </article>
+        <article class="card_two">
+          <aside class="card_quantity">
+            <div class="minus">-</div>
+            <div class="quantity">0</div>
+            <div class="plus">+</div>
+          </aside>
+          <aside class="addToCart">
+            <button>Add To Cart</button>
+          </aside>
+        </article>
+      </div>
+      <div class="card bread">
+        <article class="card_one">
+          <aside class="card_img">
+            <img src="./assert/macron1.jpg" alt="bread1" />
+          </aside>
+          <aside class="card_info">
+            <h2>Mini Macaron(Pack of 6)</h2>
+            <p>₹200.00/-</p>
+          </aside>
+        </article>
+        <article class="card_two">
+          <aside class="card_quantity">
+            <div class="minus">-</div>
+            <div class="quantity">0</div>
+            <div class="plus">+</div>
+          </aside>
+          <aside class="addToCart">
+            <button>Add To Cart</button>
+          </aside>
+        </article>
+      </div>
+      <div class="card bread">
+        <article class="card_one">
+          <aside class="card_img">
+            <img src="./assert/muffin 1.jpeg" alt="bread1" />
+          </aside>
+          <aside class="card_info">
+            <h2>ChocoChip Muffin(Pack of 4)</h2>
+            <p>₹85.00/-</p>
+          </aside>
+        </article>
+        <article class="card_two">
+          <aside class="card_quantity">
+            <div class="minus">-</div>
+            <div class="quantity">0</div>
+            <div class="plus">+</div>
+          </aside>
+          <aside class="addToCart">
+            <button>Add To Cart</button>
+          </aside>
+        </article>
+      </div>
+      <div class="card cake">
+        <article class="card_one">
+          <aside class="card_img">
+            <img src="./assert/cake1.webp" alt="bread1" />
+          </aside>
+          <aside class="card_info">
+            <h2>Rainbow Mini Cake</h2>
+            <p>₹150.00/-</p>
+          </aside>
+        </article>
+        <article class="card_two">
+          <aside class="card_quantity">
+            <div class="minus">-</div>
+            <div class="quantity">0</div>
+            <div class="plus">+</div>
+          </aside>
+          <aside class="addToCart">
+            <button>Add To Cart</button>
+          </aside>
+        </article>
+      </div>
+      <div class="card cake">
+        <article class="card_one">
+          <aside class="card_img">
+            <img src="./assert/cake2.jpg" alt="bread1" />
+          </aside>
+          <aside class="card_info">
+            <h2>Bento Customized Cakes</h2>
+            <p>₹300.00/-</p>
+          </aside>
+        </article>
+        <article class="card_two">
+          <aside class="card_quantity">
+            <div class="minus">-</div>
+            <div class="quantity">0</div>
+            <div class="plus">+</div>
+          </aside>
+          <aside class="addToCart">
+            <button>Add To Cart</button>
+          </aside>
+        </article>
+      </div>
+      <div class="card cake">
+        <article class="card_one">
+          <aside class="card_img">
+            <img src="./assert/cupcake2.jpeg" alt="bread1" />
+          </aside>
+          <aside class="card_info">
+            <h2>WaterMelon CupCake</h2>
+            <p>₹90.00/-</p>
+          </aside>
+        </article>
+        <article class="card_two">
+          <aside class="card_quantity">
+            <div class="minus">-</div>
+            <div class="quantity">0</div>
+            <div class="plus">+</div>
+          </aside>
+          <aside class="addToCart">
+            <button>Add To Cart</button>
+          </aside>
+        </article>
+      </div>
+      <div class="card cake">
+        <article class="card_one">
+          <aside class="card_img">
+            <img src="./assert/cheesecake2.jpg" alt="bread1" />
+          </aside>
+          <aside class="card_info">
+            <h2>Nutella Oreo CheeseCake</h2>
+            <p>₹170.00/-</p>
+          </aside>
+        </article>
+        <article class="card_two">
+          <aside class="card_quantity">
+            <div class="minus">-</div>
+            <div class="quantity">0</div>
+            <div class="plus">+</div>
+          </aside>
+          <aside class="addToCart">
+            <button>Add To Cart</button>
+          </aside>
+        </article>
+      </div>
+      <div class="card croissant">
+        <article class="card_one">
+          <aside class="card_img">
+            <img src="./assert/croissant1.jpeg" alt="bread1" />
+          </aside>
+          <aside class="card_info">
+            <h2>Chocolate Croissant</h2>
+            <p>₹120.00/-</p>
+          </aside>
+        </article>
+        <article class="card_two">
+          <aside class="card_quantity">
+            <div class="minus">-</div>
+            <div class="quantity">0</div>
+            <div class="plus">+</div>
+          </aside>
+          <aside class="addToCart">
+            <button>Add To Cart</button>
+          </aside>
+        </article>
+      </div>
+      <div class="card croissant">
+        <article class="card_one">
+          <aside class="card_img">
+            <img src="./assert/croissant2.jpeg" alt="bread1" />
+          </aside>
+          <aside class="card_info">
+            <h2>Raspberry Croissant</h2>
+            <p>₹130.00/-</p>
+          </aside>
+        </article>
+        <article class="card_two">
+          <aside class="card_quantity">
+            <div class="minus">-</div>
+            <div class="quantity">0</div>
+            <div class="plus">+</div>
+          </aside>
+          <aside class="addToCart">
+            <button>Add To Cart</button>
+          </aside>
+        </article>
+      </div>
+      <div class="card croissant">
+        <article class="card_one">
+          <aside class="card_img">
+            <img src="./assert/croissant3.jpg" alt="bread1" />
+          </aside>
+          <aside class="card_info">
+            <h2>Chocolate Almond Croissant</h2>
+            <p>₹150.00/-</p>
+          </aside>
+        </article>
+        <article class="card_two">
+          <aside class="card_quantity">
+            <div class="minus">-</div>
+            <div class="quantity">0</div>
+            <div class="plus">+</div>
+          </aside>
+          <aside class="addToCart">
+            <button>Add To Cart</button>
+          </aside>
+        </article>
+      </div>
+      <div class="card fruitTart">
+        <article class="card_one">
+          <aside class="card_img">
+            <img src="./assert/fruittart1.webp" alt="bread1" />
+          </aside>
+          <aside class="card_info">
+            <h2>Fruit Tart</h2>
+            <p>₹95.00/-</p>
+          </aside>
+        </article>
+        <article class="card_two">
+          <aside class="card_quantity">
+            <div class="minus">-</div>
+            <div class="quantity">0</div>
+            <div class="plus">+</div>
+          </aside>
+          <aside class="addToCart">
+            <button>Add To Cart</button>
+          </aside>
+        </article>
+      </div>
+      <div class="card fruitTart">
+        <article class="card_one">
+          <aside class="card_img">
+            <img src="./assert/fruittaart2.webp" alt="bread1" />
+          </aside>
+          <aside class="card_info">
+            <h2>Mini Fruit Tart</h2>
+            <p>₹45.00/-</p>
+          </aside>
+        </article>
+        <article class="card_two">
+          <aside class="card_quantity">
+            <div class="minus">-</div>
+            <div class="quantity">0</div>
+            <div class="plus">+</div>
+          </aside>
+          <aside class="addToCart">
+            <button>Add To Cart</button>
+          </aside>
+        </article>
+      </div>
+    </section>
+    <script src="./Menu.js"></script>
+</body>
+</html>
